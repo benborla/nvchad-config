@@ -145,3 +145,9 @@ keymap.set("n", "<Space>h", "<cmd>nohl<cr>", { noremap = true, silent = true, de
 keymap.set('n', '<Space>lf', '<cmd>lua require("conform").format({ async = true, lsp_fallback = true })<CR>', { noremap = true, silent = true, desc = "Format code" })
 
 keymap.set('n', ';', '')
+
+-- Trouble plugin
+keymap.set('n', ';g', '<cmd>TroubleToggle<cr>', { noremap = true, silent = true, desc = "Toggle Trouble" })
+
+-- Lazygit plugin
+keymap.set('n', '<Space>gg', '<cmd>LazyGit<cr>', { noremap = true, silent = true, desc = "Toggle LazyGit" })
