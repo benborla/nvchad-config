@@ -59,7 +59,7 @@ local opts = { noremap = true, silent = true }
 -- @key-map press ctrl + p to find file
 -- vim.keymap.set('n', '<C-p>', "<cmd>lua require('telescope.builtin').find_files({ no_ignore = false, hidden = true})<cr>", opts)
 vim.keymap.set('n', '<C-p>',
-  "<cmd>lua require('telescope.builtin').find_files({ respect_git_ignore = false, no_ignore = false, hidden = true, path = '%:p:h' })<CR>"
+  "<cmd>lua require('telescope.builtin').find_files({ initial_mode = 'normal', respect_git_ignore = false, no_ignore = false, hidden = true, path = '%:p:h' })<CR>"
   , { noremap = true, silent = true, desc = "Find File" })
 
 vim.keymap.set('n', ';v', "<cmd>lua require('telescope.builtin').search_history({ no_ignore = false, hidden = true})<CR>"
@@ -71,7 +71,7 @@ vim.keymap.set('n', ';r',
   { noremap = true, silent = true, desc = "Live Search" })
 
 -- @key-map press \\ find file in the buffer
-vim.keymap.set('n', '\\\\', "<cmd>lua require('telescope.builtin').buffers()<CR>",
+vim.keymap.set('n', '\\\\', "<cmd>lua require('telescope.builtin').buffers({ initial_mode = 'normal' })<CR>",
   { noremap = true, silent = true, desc = "Switch to file" })
 
 -- @key-map press ;t for help tags

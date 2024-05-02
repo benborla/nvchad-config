@@ -1,5 +1,5 @@
 require "nvchad.mappings"
-require "configs.telescope"
+require "configs.telescope-rc"
 
 -- add yours here
 
